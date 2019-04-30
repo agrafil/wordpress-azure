@@ -115,6 +115,11 @@ define('WP_SITEURL', 'http://'. filter_input(INPUT_SERVER, 'HTTP_HOST', FILTER_S
 define('WP_CONTENT_URL', '/wp-content');
 define('DOMAIN_CURRENT_SITE', filter_input(INPUT_SERVER, 'HTTP_HOST', FILTER_SANITIZE_STRING));
 
+@ini_set( 'upload_max_filesize' , '1024M' );
+@ini_set( 'post_max_size', '1024M');
+@ini_set( 'memory_limit', '256M' );
+@ini_set( 'max_execution_time', '300' );
+@ini_set( 'max_input_time', '300' );
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
